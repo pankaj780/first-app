@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - first-App
+name: Build and deploy WAR app to Azure Web App - first-app
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F79D2FB37668461E94C7A766CE58CC4E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4C27BF3E22FD471D92328B2706E95F3F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_46A0E3EA612347EEB0CAED0EA381F037 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8F69C652B5EC4CA3B77F30C2029302BF }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3218F328CEC042B3BD8F25847D4AEBB8 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A0EF1ADEB21D4AB8B5D9D46D9CE4D6F7 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'first-App'
+          app-name: 'first-app'
           slot-name: 'Production'
           package: '*.war'
           
